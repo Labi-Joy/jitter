@@ -1,32 +1,19 @@
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-white text-black grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-4 pb-20  sm:p-20 font-[family-name:var(--font-noto-sans)]">
-      <header className="row-start-1 flex items-center justify-between w-full max-w-[1200px] px-2 py-5">
-        <div className="flex items-center gap-18">
-        <h1 className="text-4xl font-bold">Jitter</h1>
-       <nav className="flex items-center gap-8">
-          <a href="/about" className="text-base text-black hover:text-gray-500 font-semibold">
-            Products
-          </a>    
-          <a href="/contact" className="text-base text-black hover:text-gray-500 font-semibold">
-            Customers
-          </a>
-          <a href="/privacy" className="text-base text-black hover:text-gray-500 font-semibold">
-            Templates
-          </a>
-          <a href="/terms" className="text-base text-black hover:text-gray-500 font-semibold">
-            Pricing
-          </a>
-       </nav>
-        </div>
-        <div className="flex items-center gap-4">
-          <a href="/login" className="text-lg font-bold text-white hover:text-gray-700 bg-black px-7 py-3 rounded-full">
-            My Files
-          </a>
-       </div>
-      </header >
-    </div>
+   <div className="bg-white text-black items-center flex flex-col justify-items-center min-h-screen p-4 pb-20  sm:p-20 font-[family-name:var(--font-noto-sans)]">
+    <Navbar/>
+    <section className="pt-20 w-full flex flex-col items-center justify-center gap-10"> 
+      <div className="bg-gray-100 rounded-full py-2 px-4 ">
+        <h4 className="capitalize"> <span className="uppercase font-bold">new: </span>infinite canvas <span className="text-purple-500 font-bold">Learn more</span></h4>
+      </div>
+      <div className="py-4">
+        <h1 className="font-bold text-8xl text-center">Super fast motion <br /> for every team</h1>
+      </div>
+      <button className="bg-purple-400 font-bold py-4 px-8 rounded-full">Try Jitter for free!</button>
+    </section>
+   </div>
   );
 }
